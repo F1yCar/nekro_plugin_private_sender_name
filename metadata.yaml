@@ -1,0 +1,9 @@
+name: nekro_plugin_private_sender_name
+display_name: OneBot 私聊昵称回填
+desc: 在 NA 核心消息 matcher 之前回填 OneBot 私聊缺失的发送者昵称。
+version: 0.1.0
+author: F1yCar
+repo: https://github.com/F1yCar/nekro_plugin_private_sender_name
+runtime: nekro_agent
+support_adapter:
+  - onebot_v11
