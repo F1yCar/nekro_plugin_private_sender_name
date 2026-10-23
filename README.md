@@ -3,6 +3,16 @@
 这个插件主要解决 SnowLuma（SL）搭配 Nekro Agent（NA）时，SL 输出的 OneBot
 私聊消息字段不标准、不完整，导致 NA 拒收的问题。
 
+## 使用前提
+
+只有在 NA 对接 SnowLuma 时才应启用本插件。其他协议端不要启用，以免增加不必要
+的昵称查询。
+
+## 开发环境
+
+- SnowLuma：`1.14.22`，镜像 `motricseven7/snowluma:v1.14.22`
+- Nekro Agent：`2.4.0`，开发时镜像 `kromiose/nekro-agent:latest`
+
 当前表现是新好友或陌生人的私聊事件缺少 `sender.nickname`，而私聊
 `sender.card` 也为空，触发 NA 核心的 `assert sender_name`，消息在进入
 `collect_message` 前被丢弃。插件不改 SnowLuma，而是在 NA 接收侧回填昵称。
